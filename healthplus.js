@@ -18,7 +18,7 @@ $(document).ready(function () {
                         setInterval(function () {
                             var x = (new Date()).getTime(), // current time
                                 y = Math.random() * 150;
-                            z = Math.round(Math.random() * 3);
+                            z = Math.ceil(Math.random() * 2);
                             heartRate.addPoint([x, y], true, true);
                             activity.addPoint([x, z], false, true);
                         }, 1000);
@@ -98,7 +98,7 @@ $(document).ready(function () {
                         for (i = -19; i <= 0; i++) {
                             data.push({
                                 x: time + i * 1000,
-                                y: Math.round(Math.random() * 3)
+                                y: Math.ceil(Math.random() * 2)
                             });
                         }
                         return data;
