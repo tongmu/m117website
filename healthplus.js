@@ -4,7 +4,6 @@ function grandmaHelp() {
 
 $(document).ready(function () {
     $(function () {
-        setInterval(grandmaHelp,5000)
         $('#monitorChart').highcharts({
             chart: {
                 animation: Highcharts.svg, // don't animate in old IE
