@@ -1,0 +1,33 @@
+div.container {
+    width: 100%;
+    margin: 10px
+}
+
+img#img01 {
+    margin: 5px 5px;
+}
+div#heartRate{
+    width:200px;
+    height:200px;
+    border:10px solid #000;
+    border-radius: 10px;
+}
+p#heartRateNumber{
+    font-size:45px;
+}
+div#heartRateText{
+    width:200px;
+}
+
+div#activity{
+    width:200px;
+    height:200px;
+    border:10px solid #000;
+    border-radius: 10px;
+}
+p#activityLevel{
+    font-size:45px;
+}
+div#activityText{
+    width:200px;
+}
