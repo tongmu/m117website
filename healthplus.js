@@ -32,7 +32,7 @@ function readFromWebsite() {
             activity = object.get("activity");
             prevButton = button;
             button = object.get("button");
-            $("#heartrateNumber").text(heartrate);
+            $("#heartrateNumber").text(+heartrate);
             switch (activity) {
             case 0:
                 $("#activityLevel").text("NONE");
@@ -63,8 +63,7 @@ function readFromWebsite() {
                 $("#heartrate").css("border-color", "#A94442");
                 $("#heartrate").css("background-color", "#f2dede");
                 $("#heartrate").css("color", "#A94442");
-            }
-            else{
+            } else {
                 $("#heartrate").css("border-color", "#3c763d");
                 $("#heartrate").css("background-color", "#d6e9c6");
                 $("#heartrate").css("color", "#3c763d");
@@ -108,6 +107,11 @@ Parse.initialize("iNlfabuNpTA2955HPt6BCi5dE1mqjaFU9kj3mBTN", "0MPcut8nTKQ7cZC13e
 
 $(document).ready(function () {
     setInterval(readFromWebsite, 1000);
+    Highcharts.setOptions({
+        global: {
+            useUTC: false
+        }
+    });
 
     $(function () {
         $('#monitorChart').highcharts({
@@ -119,18 +123,18 @@ $(document).ready(function () {
                     load: function () {
 
                         // set up the updating of the chart each second
-                        var HeartRate = this.series[1];
+                        var Heartrate = this.series[1];
                         var Activity = this.series[0];
                         setInterval(function () {
                             var x = (new Date()).getTime(); // current time
-                            HeartRate.addPoint([x, heartrate], true, true);
+                            Heartrate.addPoint([x, heartrate], true, true);
                             Activity.addPoint([x, activity], false, true);
                         }, 1000);
                     }
                 }
             },
             title: {
-                text: 'Live random data'
+                text: 'HeartRate and Activity'
             },
             xAxis: {
                 type: 'datetime',

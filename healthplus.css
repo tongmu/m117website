@@ -1,8 +1,6 @@
 div.container {
     width: 100%;
-    margin-top: 20px;
-    margin-left:20px;
-    margin-right:20px;
+    margin:20px;
 }
 
 .warning{
@@ -18,13 +16,11 @@ div.container {
 img#img01 {
     margin: 5px 5px;
 }
-div#heartrate{
-    margin-top:20%;
+#heartrate{
     width:200px;
     height:200px;
     border:10px solid;
     border-radius: 10px;
-    padding-top:30%;
 }
 p#heartrateNumber{
     font-size:42px;
@@ -36,13 +32,11 @@ div#heartrateText{
     font-weight:500;
 }
 
-div#activity{
-    margin-top:20%;
+#activity{
     width:200px;
     height:200px;
     border:10px solid;
     border-radius: 10px;
-    padding-top:30%;
 }
 p#activityLevel{
     font-size:42px;
