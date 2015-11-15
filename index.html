@@ -15,6 +15,9 @@
 <!-- Heading --------------------------------------------------------------------------  -->
 
 <body>
+    <div class="container collapse warning" id="buttonWarning">Grandma is pressing the help button!</div>
+    <div class="container collapse warning" id="highHeartrateWarning">Grandma's heartrate is higher than 100bpms!</div>
+    <div class="container collapse warning" id="lowHeartrateWarning">Grandma's heartrate is lower than 50bpms!</div>
     <div class="container" align="center">
         <img src="logo.png" alt="HealthPlus" id="img01">
         <hr>
@@ -23,10 +26,10 @@
                 <div id="monitorChart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
             </div>
             <div class="col-xs-12 col-md-2">
-                <div id="heartRate" align="center">
-                    <p id="heartRateNumber">81</p>
+                <div id="heartrate" align="center">
+                    <p id="heartrateNumber">81</p>
                 </div>
-                <div id="heartRateText" align="center">HeartRate</div>
+                <div id="heartrateText" align="center">HeartRate</div>
             </div>
             <div class="col-xs-12 col-md-2">
                 <div id="activity" align="center">
@@ -38,8 +41,9 @@
     </div>
     <script type="text/javascript" src="jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="bootstrap.min.js"></script>
-    <script type="text/javascript" src="healthplus.js"></script>
     <script type="text/javascript" src="highcharts.js"></script>
+    <script type="text/javascript" src="parse-1.6.7.min.js"></script>
+    <script type="text/javascript" src="healthplus.js"></script>
 </body>
 
 </html>
