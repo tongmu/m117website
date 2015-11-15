@@ -89,11 +89,11 @@ function readFromWebsite() {
                 helpNotTriggered = true;
                 $("#buttonWarning").collapse("hide");
             }
-            if (prevHeartRate > 100 && heartrate <= 100) {
+            if (prevHeartrate > 100 && heartrate <= 100) {
                 highHeartrateNotTriggered = true;
                 $("#highHeartrateWarning").collapse("hide");
             }
-            if (prevHeartRate < 50 && heartrate >= 50) {
+            if (prevHeartrate < 50 && heartrate >= 50) {
                 lowHeartrateNotTriggered = true;
                 $("#lowHeartrateWarning").collapse("hide");
             }
