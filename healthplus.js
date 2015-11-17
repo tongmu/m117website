@@ -28,6 +28,7 @@ function readFromWebsite() {
     var query = new Parse.Query(TestObject);
     query.get(objectID, {
         success: function (object) {
+            prevHeartrate=heartrate;
             heartrate = object.get("heartbeat");
             activity = object.get("activity");
             prevButton = button;
@@ -89,10 +90,12 @@ function readFromWebsite() {
                 $("#buttonWarning").collapse("hide");
             }
             if (prevHeartrate > 100 && heartrate <= 100) {
+                console.log("turn off high heartrate");
                 highHeartrateNotTriggered = true;
                 $("#highHeartrateWarning").collapse("hide");
             }
             if (prevHeartrate < 50 && heartrate >= 50) {
+                console.log('turn off low heartrate')
                 lowHeartrateNotTriggered = true;
                 $("#lowHeartrateWarning").collapse("hide");
             }
